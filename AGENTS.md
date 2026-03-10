@@ -1,6 +1,6 @@
 # Agent Instructions for Link Shortener Project
 
-This document outlines the coding standards and best practices that all AI agents and developers **MUST** follow when working on the Link Shortener project. **Strict adherence to every guideline in this file and the referenced `/doc` files is mandatory — no exceptions.** Deviating from these standards will result in inconsistent, unmaintainable code. Always read the relevant guideline document **before** writing any code.
+This document outlines the coding standards and best practices that all AI agents and developers **MUST** follow when working on the Link Shortener project. Deviating from these standards will result in inconsistent, unmaintainable code. Always read the relevant guideline document **before** writing any code.
 
 ## Project Overview
 
@@ -16,22 +16,6 @@ This document outlines the coding standards and best practices that all AI agent
 ## Core Guidelines by Category
 
 > **CRITICAL**: You **MUST** read the relevant guideline document before implementing any related code. Do not rely on memory or assumptions — open the file and follow it exactly.
-
-### 1. [Authentication & Authorization](./doc/08-authentication-authorization.md)
-- Clerk setup and configuration
-- Protected routes and pages
-- Sign in/sign up modals
-- Dashboard access control
-- API authentication
-- User redirects and navigation
-
-### 2. [UI Components](./doc/09-ui-components.md)
-- shadcn/ui usage standards
-- Component installation and setup
-- Form handling with React Hook Form
-- Styling and customization
-- Accessibility standards
-- Common component patterns
 
 ## Quick Reference
 
@@ -60,14 +44,6 @@ npm run lint     # Run ESLint checks
 npm start        # Start production server
 ```
 
-## Before Starting Work
-
-For detailed guidelines on specific topics, refer to the modular documentation in the `/doc` directory. **ALWAYS** refer to the relevant `.md` file **BEFORE** generating any code. **This is non-negotiable.**
-
-**Priority checks before coding:**
-1. Authentication/Authorization: Check [Authentication & Authorization](./doc/08-authentication-authorization.md) for any auth-related work
-2. UI Components: Check [UI Components](./doc/09-ui-components.md) for component patterns and shadcn/ui usage
-
 ## Important Notes
 
 > **WARNING**: Violating any of the rules below will introduce bugs, security issues, or inconsistencies. Treat every item as a hard requirement.
@@ -93,7 +69,7 @@ For detailed guidelines on specific topics, refer to the modular documentation i
 ## Updates and Maintenance
 
 These agent instructions are living documents. When adding new standards or changing existing ones:
-1. Update the relevant file in `/doc`
+1. Update the relevant file
 2. Update the links in this main AGENTS.md if categories change
 3. Document any deprecations clearly
 4. Notify the team of significant changes

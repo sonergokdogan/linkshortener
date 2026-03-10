@@ -1,6 +1,9 @@
-# Authentication & Authorization Guide
+---
+description:  Read this before implementing or modifying authentication in the project.
+---
 
-## Overview
+# Authentication Guidelines
+
 
 **Clerk** is the exclusive authentication and authorization provider for this project. No other authentication method should be implemented. Clerk provides user management, sign-in/sign-up flows, and session management out of the box.
 

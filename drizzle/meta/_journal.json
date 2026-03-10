@@ -15,6 +15,13 @@
       "when": 1772717852945,
       "tag": "0001_overrated_malcolm_colcord",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1773155749946,
+      "tag": "0002_flimsy_chimera",
+      "breakpoints": true
     }
   ]
 }
