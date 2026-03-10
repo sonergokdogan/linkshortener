@@ -8,6 +8,7 @@ export const links = pgTable('links', {
   shortCode: varchar('short_code', { length: 12 }).notNull().unique(),
   expiresAt: timestamp('expires_at'),
   createdAt: timestamp('created_at').notNull().defaultNow(),
+  updatedAt: timestamp('updated_at').notNull().defaultNow(),
 }, (table) => ({
   userIdIdx: index('links_user_id_idx').on(table.userId),
   shortCodeIdx: index('links_short_code_idx').on(table.shortCode),
