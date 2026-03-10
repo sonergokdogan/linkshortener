@@ -1,5 +1,8 @@
-import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
+'use client';
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@clerk/nextjs";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import {
@@ -38,13 +41,16 @@ const features = [
   },
 ];
 
-export default async function Home() {
-  const { userId } = await auth();
+export default function Home() {
+  const router = useRouter();
+  const { userId, isLoaded } = useAuth();
 
-  // Redirect logged-in users to dashboard
-  if (userId) {
-    redirect("/dashboard");
-  }
+  useEffect(() => {
+    // Redirect logged-in users to dashboard once auth is loaded
+    if (isLoaded && userId) {
+      router.push("/dashboard");
+    }
+  }, [userId, isLoaded, router]);
 
   return (
     <main>
@@ -61,10 +67,10 @@ export default async function Home() {
             — so you can share with confidence and measure what matters.
           </p>
           <div className="flex gap-4 mt-2">
-            <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
+            <SignUpButton mode="modal">
               <Button size="lg">Get started for free</Button>
             </SignUpButton>
-            <SignInButton mode="modal" forceRedirectUrl="/dashboard">
+            <SignInButton mode="modal">
               <Button size="lg" variant="outline">
                 Sign in
               </Button>
